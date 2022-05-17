@@ -69,29 +69,31 @@ class CleaningData:
 		within_spaces=True,
 		digits=True,
 		strip_spaces=True):
-
-		if lowering:
-			text = self.lowering(text)
-	
-		if punctuation:
-			text = self.del_punct_wsp(text)
-	
-		if strip_accents:
-			text = self.strip_accents(text)
-
-		if within_spaces:
-			text = self.remove_within_wsp(text)
+		if isinstance(text, str): 
+			if lowering:
+				text = self.lowering(text)
 		
-		if digits:
-			text = self.remove_digits(text)
-	
-		if strip_spaces:
-			text = self.strip_spaces(text)
+			if punctuation:
+				text = self.del_punct_wsp(text)
+		
+			if strip_accents:
+				text = self.strip_accents(text)
 
-		if within_spaces:
-			text = self.remove_within_wsp(text)  
+			if within_spaces:
+				text = self.remove_within_wsp(text)
+			
+			if digits:
+				text = self.remove_digits(text)
+		
+			if strip_spaces:
+				text = self.strip_spaces(text)
 
-		return text
+			if within_spaces:
+				text = self.remove_within_wsp(text)  
+
+			return text
+		else: 
+			return None
 
 
 	def text_col_cleaning(self,
