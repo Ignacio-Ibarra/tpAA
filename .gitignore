@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 #Archivos Ignorados
-#data/cabaventa.csv
+data/cabaventa.csv
