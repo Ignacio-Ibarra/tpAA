@@ -130,3 +130,5 @@ dmypy.json
 
 #Archivos Ignorados
 data/cabaventa.csv
+resultados/cabaventa_preproc.csv
+resultados/cabaventa_feature.csv
