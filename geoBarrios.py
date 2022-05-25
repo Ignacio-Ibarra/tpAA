@@ -44,8 +44,7 @@ def point_in_polygon(point, polygon):
     polygon = Polygon(polygon) #shapley object
     return polygon.contains(point)
 
-def is_caba(coord): 
-    return(point_in_polygon(coord, poligono_caba))
+
 
 def is_in_nbhd(coord, polygons_dict, est_nbhd = None):
     """ coord: tuple with lon & lat coordinates
