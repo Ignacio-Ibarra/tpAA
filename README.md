@@ -7,3 +7,5 @@
 5. Modelo (categorización de precio / split / RandomSearch / Evaluacion)
 6. Además puede haber archivos *.py que contengan funciones o clases (como por ejemplo el archivo cleaning.py). 
 Todos los archivos que sean para probar cosas, los ignoramos para no subirlos al repo y que queden en nuestro disco local.
+
+Para correr facilmente el repo instalar paquetes mediante comando `conda env create tpAA.yml` o instalar librerías desde 

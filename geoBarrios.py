@@ -21,7 +21,7 @@ def geoBarrios(obj_returned = "dict"):
         datos = {k:properties[k] for k in keys}
         datos['coordinates'] = js['features'][i]['geometry']['coordinates']
         df_temp = pd.DataFrame(datos, index=[i])
-        geoBarrios = geoBarrios.append(df_temp, ignore_index=True)
+        geoBarrios = pd.concat([geoBarrios, df_temp], ignore_index=True)
 
     geoBarrios.columns = [x.lower() for x in geoBarrios.columns]
     geoBarrios['barrio'] = geoBarrios['barrio'].apply(lambda x: x.lower().replace("gral.", "general").replace("ñ","n").lstrip().rstrip())
